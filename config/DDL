@@ -1,0 +1,8 @@
+<!-- »ùÇÃ Å×ÀÌºí -->
+create table test.sample 
+(id varchar(10) primary key,
+ password varchar(100));
+ 
+ <!-- »ùÇÃ µ¥ÀÌÅÍ -->
+ insert test.sample
+ values ('sampleId', 'pass');
