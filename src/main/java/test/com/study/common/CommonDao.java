@@ -37,7 +37,7 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 
 	 
 	 //파라미터가 있는 selectOne
-	 public <T, P> T selectOne(P p, String queryId) {
+	 public <T, P> T selectOne(String queryId, P p) {
 		 
 		 return getSqlSession().selectOne(nameSpace+"."+queryId, p);
 		 
@@ -50,7 +50,7 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 }
 	 
 	 //파라미터가 있는 selectList
-	 public <T, P> List<T> selectList(P p, String queryId) {
+	 public <T, P> List<T> selectList(String queryId, P p) {
 		 
 		 return getSqlSession().selectList(nameSpace+"."+queryId, p);
 	 }
@@ -63,7 +63,7 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 
 	 
 	 //파라미터가 있는 update
-	 public <P>int update(P p, String queryId) {
+	 public <P>int update(String queryId, P p) {
 		 
 		 return getSqlSession().update(nameSpace+"."+queryId, p);
 	 }
@@ -76,7 +76,7 @@ public class CommonDao extends SqlSessionDaoSupport {
 	 
 	 
 	 //파라미터가 있는 delete
-	 public <P>int delete(P p, String queryId) {
+	 public <P>int delete(String queryId, P p) {
 		 
 		 return getSqlSession().delete(nameSpace+"."+queryId, p);
 	 }
